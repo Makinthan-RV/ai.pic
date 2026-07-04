@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Env & secrets
+.env
+.env.local
+
+# Local data (images + vector DB) — never commit user photos
+ai-service/data/
+!ai-service/data/.gitkeep
+
+# InsightFace model cache (if it ever lands in-repo)
+.insightface/
+
+# Node (for the future Next.js frontend)
+node_modules/
+.next/
+
+# OS
+Thumbs.db
+.DS_Store
