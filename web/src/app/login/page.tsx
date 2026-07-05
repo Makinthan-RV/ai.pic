@@ -48,7 +48,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen w-full items-center justify-center bg-neutral-50 p-4 dark:bg-neutral-950">
       <motion.div
-        className="grid h-[640px] w-full max-w-5xl grid-cols-1 overflow-hidden rounded-2xl border border-neutral-200 shadow-2xl dark:border-neutral-800 lg:grid-cols-2"
+        className="grid min-h-[560px] w-full max-w-5xl grid-cols-1 overflow-hidden rounded-2xl border border-neutral-200 shadow-2xl dark:border-neutral-800 lg:h-[640px] lg:grid-cols-2"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}

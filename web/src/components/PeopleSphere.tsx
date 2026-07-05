@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import SphereImageGrid, { type ImageData } from "@/components/ui/img-sphere";
 
 const u = (id: string) =>
@@ -39,12 +40,21 @@ const IMAGES: ImageData[] = [
 ];
 
 export function PeopleSphere() {
+  // Size the sphere to the viewport so it never overflows on phones.
+  const [size, setSize] = useState(420);
+  useEffect(() => {
+    const calc = () => setSize(Math.min(480, Math.max(280, window.innerWidth - 40)));
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, []);
+
   return (
     <div className="flex w-full justify-center overflow-hidden">
       <SphereImageGrid
         images={IMAGES}
-        containerSize={480}
-        sphereRadius={175}
+        containerSize={size}
+        sphereRadius={size * 0.36}
         baseImageScale={0.16}
         dragSensitivity={0.8}
         momentumDecay={0.96}

@@ -82,7 +82,7 @@ export default function Landing() {
           </div>
 
           {/* Get started badge */}
-          <Link href="/signup" className="pointer-events-auto absolute bottom-[-4%] right-[4%] z-40 md:right-[16%]">
+          <Link href="/signup" className="pointer-events-auto absolute bottom-[-4%] right-[4%] z-40 hidden sm:block md:right-[16%]">
             <div className="relative flex h-28 w-28 rotate-12 items-center justify-center rounded-full border-[3px] border-black/5 bg-[#CCFF00] shadow-xl transition-transform hover:scale-105 md:h-36 md:w-36">
               <div className="absolute inset-1 animate-[spin_10s_linear_infinite]">
                 <svg viewBox="0 0 100 100" className="h-full w-full">
@@ -174,7 +174,7 @@ function FloatCard({
     <motion.div
       animate={{ y: [0, -16, 0] }}
       transition={{ duration: 5 + delay, repeat: Infinity, ease: "easeInOut", delay }}
-      className={`pointer-events-auto absolute z-30 ${className}`}
+      className={`pointer-events-auto absolute z-30 hidden sm:block ${className}`}
     >
       <div className="flex w-36 flex-col items-center rounded-[2rem] border border-white/40 bg-white/20 p-4 shadow-2xl backdrop-blur-md transition-transform duration-500 hover:rotate-0 md:w-48 md:p-5">
         <div className="mb-3 h-16 w-16 overflow-hidden rounded-full border-[3px] border-white/50 md:h-24 md:w-24">

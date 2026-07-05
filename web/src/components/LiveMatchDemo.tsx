@@ -63,7 +63,7 @@ export function LiveMatchDemo() {
   }
 
   return (
-    <div className="w-full max-w-xl rounded-3xl border border-neutral-200 bg-white p-5 shadow-2xl md:p-7">
+    <div className="w-full max-w-xl rounded-3xl border border-neutral-200 bg-white p-4 shadow-2xl sm:p-5 md:p-7">
       {/* Avatar / scanner */}
       <div className="relative mx-auto -mt-12 mb-2 w-fit">
         <div className="relative h-24 w-24">
@@ -109,7 +109,7 @@ export function LiveMatchDemo() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-3">
         {CARDS.slice(0, visibleCount).map((src, i) => {
           const isRevealed = i < INITIAL ? i < revealed : true;
           return (
